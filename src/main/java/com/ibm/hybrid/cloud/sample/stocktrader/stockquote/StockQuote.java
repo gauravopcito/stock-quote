@@ -291,7 +291,8 @@ public class StockQuote extends Application {
 	}
 
 	private boolean isStale(Quote quote) {
-		if (quote==null) return true;
+		return false;
+		/**if (quote==null) return true;
 
 		long now = System.currentTimeMillis();
 		long then = quote.getTime();
@@ -302,7 +303,7 @@ public class StockQuote extends Application {
 		String symbol = quote.getSymbol();
 		logger.info("Quote for "+symbol+" is "+difference/((double)MINUTE_IN_MILLISECONDS)+" minutes old");
 
-		return (difference > cache_interval*MINUTE_IN_MILLISECONDS); //cached quote is too old
+		return (difference > cache_interval*MINUTE_IN_MILLISECONDS); //cached quote is too old */
     }
 
 	private Quote getTestQuote(String symbol, double price) { //in case API Connect or IEX is down or we're rate limited
